@@ -96,6 +96,10 @@ Scatter plots and correlation matrices were used to explore relationships betwee
 #### Categorical Comparisons:
 Bar plots compared performance metrics across different music genres and exercise types.
 
+### Personal Preferences
+
+Daily listening data and workout listening data is revealed and while in overall I listen every genre similary, I tend not to listen pop and classical music during workouts.
+
 ### Genre Impact
 
 Analysis of average weight lifted per set revealed:
@@ -116,29 +120,11 @@ Energy levels showed a weaker, almost negligible correlation with performance.
 
 Regression Analysis: Showed that tempo had a positive influence, while energy's impact was minimal.
 
-## Machine Learning Models
-
-### Random Forest Regression
-
-A Random Forest model was trained to predict average_weight_per_set. The model achieved:
-
-Mean Squared Error (MSE): Moderate accuracy in prediction.
-
-R² Score: Indicated the model explained a substantial portion of the variance in average weight lifted.
-
-Feature Importance:
-
-Tempo was the most influential feature.
-
-Genres like Phonk and Hip-Hop significantly contributed to predictions.
-
-The codes related to this model can be found in "
+## Machine Learning Model
 
 ### Linear Regression
 
 A Linear Regression model provided additional interpretability:
-
-Highlighted similar trends as the Random Forest model.
 
 Coefficient analysis confirmed the positive impact of tempo on performance and minimal influence of energy.
 
