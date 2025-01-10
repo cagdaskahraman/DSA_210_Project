@@ -147,3 +147,51 @@ Experiment with advanced models (e.g., Gradient Boosting) for higher predictive 
 ## Conclusion
 
 Music, particularly its tempo and genre, slightly impacts workout performance. By leveraging the insights from this analysis, individuals can optimize their music playlists to enhance their fitness outcomes. Further exploration of personalization and additional attributes can refine these findings.
+
+## Limitations and Future Directions
+
+### Limitations
+
+#### Dataset Size and Scope:
+
+The data collected was limited to specific users and a finite number of workout sessions, potentially reducing the generalizability of the findings.
+
+Music preferences and workout styles vary significantly among individuals, which might not be fully captured in this dataset.
+
+#### Music Attributes:
+
+Only a subset of music attributes (genre, tempo, energy) was analyzed. Other factors like lyrics, mood, and volume could also influence performance.
+
+#### Exercise Variability:
+
+Different exercises may be affected differently by music attributes. For example, high-intensity exercises might benefit more from high-tempo music compared to steady-state exercises.
+
+#### Model Limitations:
+
+The Random Forest model, while effective, can be computationally intensive and may overfit smaller datasets. That is why it was not implemented. But if it was implemented succesfully, this model would be more accurate compared to linear regression model.
+
+Linear Regression's simplicity might not fully capture complex relationships between features.
+
+### Future Directions
+
+#### Expanding the Dataset:
+
+Collect data from a broader range of users with diverse demographics and fitness levels to improve generalizability.
+
+#### Incorporating Additional Features:
+
+Include more detailed music features like mood, lyrics sentiment, or user-defined preferences.
+
+Analyze environmental factors such as gym noise or time of day.
+
+### Improved Modeling Approaches:
+
+Explore advanced machine learning models like Gradient Boosting or Neural Networks for higher accuracy.
+
+Use time-series analysis to better understand how performance evolves during a workout session.
+
+### Personalization:
+
+Develop personalized models tailored to individual users based on their historical data and preferences.
+
+
