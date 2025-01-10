@@ -15,6 +15,16 @@ I have a question and a clear purpose. So I know what data I should gather for m
 
 ## Data Overwiev
 
+### Data Collection
+
+The data for this analysis was collected from two primary sources:
+
+Spotify: Information about songs, including genre, tempo, and energy levels, was exported from Spotify.
+
+Hevy App: Workout logs, including exercise details, weights, repetitions, and timestamps, were exported from the Hevy application.
+
+The datasets were combined to link music attributes with workout performance by matching timestamps.
+
 ### Data Exploration and Cleaning
 
 Before the analysis, several data preparation steps were performed:
@@ -69,9 +79,24 @@ Energy: A measure of the song's intensity and activity.
 
 Both datasets were merged based on timestamps to associate workout sessions with music attributes. During this process, overlapping time intervals between workout sessions and music playback were identified to link genres, tempo, and energy with specific workouts. Challenges included mismatched timestamps and missing data for certain sessions. Missing timestamps were handled by filtering out incomplete entries, and time overlaps were resolved using strict interval matching to ensure accurate associations.
 
+All the data processing codes can be found in data_processing_and_visualization.ipynb file
+
 ## Key Findings
 
-#### Genre Impact
+### Exploratory Data Analysis (EDA)
+
+Before conducting statistical tests and modeling, the following exploratory data analysis steps were performed:
+
+##### Distribution Visualizations: 
+Histograms and boxplots were created for Tempo, Energy, and Average Weight per Set to identify data spread and potential outliers.
+
+#### Correlation Analysis:
+Scatter plots and correlation matrices were used to explore relationships between numerical variables (e.g., tempo, energy, and average weight per set).
+
+#### Categorical Comparisons:
+Bar plots compared performance metrics across different music genres and exercise types.
+
+### Genre Impact
 
 Analysis of average weight lifted per set revealed:
 
@@ -79,14 +104,60 @@ Phonk and Hip-Hop were associated with the highest average weight lifted per set
 
 Classical and Pop showed relatively lower performance impacts.
 
-#### Tempo and Energy
+But there is no strong effect of genre on workout performance could be found based on visualized data as can be seen in data_processing_and_visualization.ipynb
+
+### Tempo and Energy
 
 Higher tempo songs were moderately correlated with increased weight lifting performance.
 
 Energy levels showed a weaker, almost negligible correlation with performance.
 
-#### Statistical Analysis
-
-ANOVA Test: Indicated significant differences in performance across genres (p < 0.05).
+### Statistical Analysis
 
 Regression Analysis: Showed that tempo had a positive influence, while energy's impact was minimal.
+
+## Machine Learning Models
+
+### Random Forest Regression
+
+A Random Forest model was trained to predict average_weight_per_set. The model achieved:
+
+Mean Squared Error (MSE): Moderate accuracy in prediction.
+
+R² Score: Indicated the model explained a substantial portion of the variance in average weight lifted.
+
+Feature Importance:
+
+Tempo was the most influential feature.
+
+Genres like Phonk and Hip-Hop significantly contributed to predictions.
+
+The codes related to this model can be found in "
+
+### Linear Regression
+
+A Linear Regression model provided additional interpretability:
+
+Highlighted similar trends as the Random Forest model.
+
+Coefficient analysis confirmed the positive impact of tempo on performance and minimal influence of energy.
+
+The codes related to this model can be found in "ml model using linear regression.ipynb".
+
+## What Can Be Done
+
+### Optimizing Workout Music
+
+Incorporate high-tempo genres like Phonk and Hip-Hop to boost weightlifting performance.
+
+Avoid low-energy or slow-tempo genres like Classical during high-intensity exercises.
+
+### Model Improvements
+
+Include additional features such as duration of music listening and user-specific preferences.
+
+Experiment with advanced models (e.g., Gradient Boosting) for higher predictive accuracy.
+
+## Conclusion
+
+Music, particularly its tempo and genre, slightly impacts workout performance. By leveraging the insights from this analysis, individuals can optimize their music playlists to enhance their fitness outcomes. Further exploration of personalization and additional attributes can refine these findings.
